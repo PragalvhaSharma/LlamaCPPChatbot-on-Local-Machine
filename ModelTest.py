@@ -2,7 +2,7 @@ from llama_cpp import Llama
 import timeit
 
 # Load Llama 2 model
-llm = Llama(model_path="/Users/pragalvhasharma/Downloads/Prag GO to Documents/Ulink ProtoType/i8/Final Chatbot/llama-2-7b-chat.Q4_K_M.gguf",
+llm = Llama(model_path="Model Pat",
             n_ctx=512,
             n_batch=128)
 
@@ -10,7 +10,7 @@ llm = Llama(model_path="/Users/pragalvhasharma/Downloads/Prag GO to Documents/Ul
 start = timeit.default_timer()
 
 # Generate LLM response
-prompt = "You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'.."
+prompt = "You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'."
 
 output = llm(prompt,
              max_tokens=-1,
