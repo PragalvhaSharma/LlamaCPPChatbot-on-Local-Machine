@@ -11,13 +11,13 @@ def ChatModel(temperature, top_p):
     # Load a specific model based on user selection
     if selected_model == 'llama2-7b-chat (4bit)':
         return AutoModelForCausalLM.from_pretrained(
-            '/Users/pragalvhasharma/Downloads/Prag GO to Documents/Ulink ProtoType/i8/Final Chatbot/llama-2-7b-chat.Q4_K_M.gguf', 
+            'Model Path 1', 
             model_type='llama',
             temperature=temperature, 
             top_p=top_p)
     else:
         return AutoModelForCausalLM.from_pretrained(
-            '/Users/pragalvhasharma/Downloads/Prag GO to Documents/Ulink ProtoType/i8/Final Chatbot/llama-pro-8b-instruct.Q4_K_M.gguf', 
+            'Model Path 2', 
             model_type='llama',
             temperature=temperature, 
             top_p=top_p)
@@ -33,7 +33,7 @@ with st.sidebar:
     # Dropdown to select the model
     selected_model = st.sidebar.selectbox(
         'Choose a Llama2 model', 
-        ['llama2-7b-chat (4bit)', 'llama-pro-8b-instruct (4bit)'], 
+        ['Model Name 1', 'Model Name 2'], 
         key='selected_model')
     # Load the selected chat model
     chat_model = ChatModel(temperature, top_p)
