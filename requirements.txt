@@ -1,2 +1,3 @@
 llama-cpp
-cTransformers
+streamlit
+ctransformers
